@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>The Public Public Domain Calculator</title>
+		<meta name="keywords" content="copyright, us, public, domain, calculator, law, term">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<author>*Phil Weiss*<a href="http://www.freepik.com">Selected by freepik</a></author>
+	</head>
+	<body>
+		<div class="all-done">
+			<h2>From what you've told us, it seems likely that the work you are asking about is in the public domain in the US. But note that there are exceptions.</h2>
+			<a href="index.html">Try again?</a>
+		</div>
+		<div class="intro">
+			<div class="title">
+				<h1>Public Domain Calculator</h1>
+				<p>*This is currently in development*</p>
+				<p>After a certain amount of time, an original work protected by US copyright becomes free to use, without the original author's consent. There are great databases of public-domain work out there, but if you can't find what you're looking for there, answer the following questions!</p>
+			</div>
+			<a href="#q1" class="next bounce"></a>
+		</div>
+		<div id="q1" class="panel">
+			<p class="question">
+				In what year was the work <a class="help">published</a>?
+			</p>
+			<form>
+				<input type="text" placeholder="19XX" id="public" value="" required="">
+			</form>
+			<p class="help-text">Published is a term of art here. Generally, it means that you've shared the work outside of a normal group of friends and family for purposes of selling the work, licensing it, or otherwise distributing it.</p>
+			<a href="#q2" class="next"></a>
+		</div>
+		<div id="q2" class="panel">
+			<a href="#q1" class="last"></a>
+			<a class="next"></a>
+		</div>
+		<div id="q3a" class="panel">
+			<a href="#q2" class="last"></a>
+			<a class="next"></a>
+		</div>
+		<div id="q3b" class="panel">
+			<a href="#q2" class="last"></a>
+			<a class="next"></a>
+		</div>
+		<div id="q4a" class="panel">
+		</div>
+		<div id="q4b" class="panel">
+		</div>
+
+		<script src="js/main.js"></script>
+	</body>
+
+</html>
