@@ -12,14 +12,14 @@ $(document).ready(function(){
 
 	$('#q1 a.next').on('click', function() {
 		var published = $('#public').val();
+		var renew = parseInt(published) + 28;
 		$('.published').html(published);
 		$('#track ul').append("<li class='publishDate'>Published in " + published + "</li>").fadeIn(300);
 		if(published < 1923 && published > 0){
 			pd();
-		} else if (published < 1950) {
-			$('#q2 .next').attr('href','#q3a');
-		} else if (published < 1964) {
-			$('#q2 .next').attr('href','#q3b');
+		} else if (published < 1978) {
+			$('#q2 .next').attr('href','#q3');
+			$('#renew').html(renew);
 		} else {
 			$('#q2 .next').attr('href','#q4');}
 	});
@@ -27,39 +27,24 @@ $(document).ready(function(){
 	$('#q2 a.next').on('click', function() {
 		var created = $('#create').val();
 		var published = $('#public').val();
-		var renew = parseInt(published) + 28;
 		$('.created').html(created);
-		console.log(published);
 		$('#track ul').append("<li class='createDate'>Created in " + created + "</li>");
-		if(published < 1950){
-			$('#renew1950').html(renew);
-		} else if (published < 1964){
-			$('#renew1964').html(renew);
-		} else if (created > published){
+		if (created > published){
 			$('#error').fadeIn(500);}
 	});
 
-	$('q3a a.next').on('click', function(){
+	$('#q3 a.finish').on('click', function(){
+		console.log("go!")
 		var published = parseInt($('#public').val());
-		if ($('#yes1950').is(':checked')) {
+		if ($('#yesRenew').is(':checked')) {
 			$('#expiration').html(published+96);
 			notPd();
-		} else if ($('#no1950').is(':checked')) {
+		} else if ($('#noRenew').is(':checked')) {
 			pd();
 		}
 	});
 
-	$('q3b a.next').on('click', function(){
-		var published = parseInt($('#public').val());
-		if ($('#yes1964').is(':checked')) {
-			$('#expiration').html(published+96);
-			notPd();
-		} else if ($('#no1964').is(':checked')) {
-			pd();
-		}
-	});
-
-	$('q4 a.next').on('click', function(){
+	$('#q4 a.next').on('click', function(){
 		var created = parseInt($('#create').val());
 		if ($('#yesWFH').is(':checked') && created>1978) {
 			var expire
@@ -71,7 +56,8 @@ $(document).ready(function(){
 			notPd();} 
 	});
 
-	$('q5 a.next').on('click', function(){
+	$('#q5 a.finish').on('click', function(){
+		console.log('go!');
 		var published = parseInt($('#public').val());
 		var created = parseInt($('#create').val());
 		var expire
@@ -141,7 +127,7 @@ $(document).ready(function(){
 		$('.help-text').fadeOut(500);
 		$(this).parent().slideUp(500);
 		if ($(this).parent('#q2')){$('li.createDate').html('');}
-		if ($(this).parent('#q2')){$('li.publishDate').html('');}
+		if ($(this).parent('#q1')){$('li.publishDate').html('');}
 	});
 
 	//FORMATTING

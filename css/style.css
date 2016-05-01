@@ -161,8 +161,8 @@ div.panel form {
 	position:relative;
 	top:40%;
 	font-family:sans-serif;
-	left:calc(50% - 60px);
-	width:120px;
+	left:calc(50% - 12.5vmin);
+	width:25vmin;
 	font-size:3vmin;
 }
 
@@ -172,6 +172,7 @@ input {
 	letter-spacing: 1.65vmin;
 	border:0;
 	border-bottom:1px solid #ccc;
+	margin:0 4.5vmin;
 }
 
 input:focus {
@@ -245,6 +246,11 @@ input[type="submit"] {
 	padding:20px;
 }
 
+input[type="radio"],input[type="checkbox"]{
+	margin:0;
+	width:20px;
+}
+
 /*ALL DONE*/
 
 #error {
@@ -270,4 +276,15 @@ input[type="submit"] {
 	border-radius:5px;
 	z-index:100;
 	display:none;
+}
+
+.finish {
+	position:absolute;
+	bottom:10%;
+	width:15vmin;
+	height:10vmin;
+	left:calc(50% - 7.5vmin);
+	color:black;
+	font-size:3vmin;
+	font-family:sans-serif;
 }
