@@ -128,6 +128,14 @@ p {
 	position:relative;
 }
 
+.close {
+	position:absolute;
+	top:0;
+	right:0;
+	padding:3px;
+	cursor:pointer;
+}
+
 /*TITLE*/
 
 .title {
@@ -161,7 +169,7 @@ div.panel form {
 input {
 	width:16vmin;
 	font-size:4vmin;
-	letter-spacing: 2vmin;
+	letter-spacing: 1.65vmin;
 	border:0;
 	border-bottom:1px solid #ccc;
 }
@@ -178,16 +186,20 @@ input:focus {
 	display:none;
 	position:fixed;
 	top:10px;
-	right:10px;
+	right:20px;
 	width:40vmin;
 	height:auto;
 	background-color:#FFFFCC;
 	padding:20px;
-	text-align:left;
+	text-align:justify;
 	z-index:99;
 }
 
-/*ARROWS*/
+input[type="submit"] {
+	display:none;
+}
+
+/*ARROWS & NAV*/
 
 .last {
 	position:absolute;
@@ -216,9 +228,39 @@ input:focus {
 	position:absolute;
 }
 
+#track {
+	position:fixed;
+	top:0;
+	left:0;
+	height:auto;
+	width:auto;
+}
+
+#track ul li {
+	color:#ccc;
+	font-size:2.5vmin;
+	height:2.5vmin;
+	width:200px;
+	font-family:sans-serif;
+	padding:20px;
+}
+
 /*ALL DONE*/
 
-.all-done {
+#error {
+	position:fixed;
+	width:80%;
+	height:80%;
+	left:10%;
+	top:20%;
+	background-color:white;
+	border-radius:5px;
+	z-index:100;
+	display:none;
+	color:red;
+}
+
+.all-done1, .all-done2 {
 	position:fixed;
 	width:80%;
 	height:80%;
