@@ -89,17 +89,6 @@ $(document).ready(function(){
 		}
 	});
 
-	//HAMBURGER MENU
-
-	// $('.hamburger').on('click', function() {
-	// 	$('hamburger').toggleClass('fixed');
-	// 	$('nav ul li').slideToggle(300);
-	// 	$('nav ul li').css({
-	// 		display:'list-item',
-	// 		float:'left'
-	// 	});
-	// });
-
 	//HELP
 
 	$('a.help').on('click', function(event) {
@@ -126,8 +115,9 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.help-text').fadeOut(500);
 		$(this).parent().slideUp(500);
-		if ($(this).parent('#q2')){$('li.createDate').html('');}
-		if ($(this).parent('#q1')){$('li.publishDate').html('');}
+		if ($(this).parent('#q2')){
+			$('li.publishDate').remove();}
+		if ($(this).parent('#q3')){$('li.createDate').remove();}
 	});
 
 	//FORMATTING

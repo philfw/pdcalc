@@ -37,6 +37,7 @@
 
 * {
 	box-sizing: border-box;
+	font-family:sans-serif;
 }
 
 head, author {
@@ -234,16 +235,17 @@ input[type="submit"] {
 	top:0;
 	left:0;
 	height:auto;
-	width:auto;
+	width:20%;
 }
 
 #track ul li {
 	color:#ccc;
 	font-size:2.5vmin;
 	height:2.5vmin;
-	width:200px;
+	width:100%;
 	font-family:sans-serif;
 	padding:20px;
+	margin-bottom:20px;
 }
 
 input[type="radio"],input[type="checkbox"]{
@@ -263,7 +265,6 @@ input[type="radio"],input[type="checkbox"]{
 	border-radius:5px;
 	z-index:100;
 	display:none;
-	color:red;
 }
 
 .all-done1, .all-done2 {
@@ -276,6 +277,21 @@ input[type="radio"],input[type="checkbox"]{
 	border-radius:5px;
 	z-index:100;
 	display:none;
+}
+
+.start-over {
+	display:block;
+	width:150px;
+	height:60px;
+	border-radius:5px;
+	background-color:blue;
+	color:white;
+	text-align:center;
+	padding:20px;
+	margin-left:calc(50% - 75px);
+	margin-top:10%;
+	font-family:sans-serif;
+	font-size:20px;
 }
 
 .finish {
